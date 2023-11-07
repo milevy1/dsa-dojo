@@ -20,6 +20,21 @@ class Stack {
   get empty() {
     return this.count === 0
   }
+
+  validate(stringInput) {
+    const elements = stringInput.split('')
+  
+    for (const element of elements) {
+        if (element === '(') {
+          this.push(element)
+        }
+        if (element === ')' && this.pop() != '(') {
+          return false
+        }
+    }
+
+    return this.empty
+  }
 }
   
 module.exports = Stack
