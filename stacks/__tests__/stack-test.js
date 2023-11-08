@@ -65,23 +65,4 @@ describe('Stack', () => {
       expect(subject.empty).toEqual(true)
     })
   })
-
-  describe('validate', () => {
-    it.each([
-      '()',
-      '(())',
-      '(()()())()'
-    ])('returns true if parentheses are properly nested, test case: %s', (validString) => {
-      expect(subject.validate(validString)).toEqual(true)
-    })
-
-    it.each([
-      '(', 
-      ')', 
-      '())', 
-      '()(('
-    ])('returns false if parentheses are NOT properly nested, test case: %s', (invalidString) => {
-      expect(subject.validate(invalidString)).toEqual(false)
-    })
-  })
 })
