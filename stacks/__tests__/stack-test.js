@@ -52,17 +52,17 @@ describe('Stack', () => {
     })
   })
 
-  describe('empty', () => {
+  describe('isEmpty', () => {
     it('returns a true if the stack is empty', () => {
-      expect(subject.empty).toEqual(true)
+      expect(subject.isEmpty).toEqual(true)
     })
 
     it('returns false if the stack is not empty', () => {
       subject.push('A')
-      expect(subject.empty).toEqual(false)
+      expect(subject.isEmpty).toEqual(false)
 
       subject.pop()
-      expect(subject.empty).toEqual(true)
+      expect(subject.isEmpty).toEqual(true)
     })
   })
 })
